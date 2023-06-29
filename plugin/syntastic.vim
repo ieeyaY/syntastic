@@ -275,7 +275,7 @@ endfunction " }}}2
 augroup syntastic
     autocmd!
     autocmd VimEnter    * call s:VimEnterHook()
-    autocmd BufEnter    * call s:BufEnterHook(expand('<afile>', 1))
+    autocmd BufEnter    * silent! call s:BufEnterHook(expand('<afile>', 1))
     autocmd BufWinEnter * call s:BufWinEnterHook(expand('<afile>', 1))
 augroup END
 
